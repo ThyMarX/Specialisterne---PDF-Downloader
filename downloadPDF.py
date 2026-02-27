@@ -2,6 +2,7 @@ import os
 import pandas
 import requests
 import csv
+import datetime
 
 #   ---
 #
@@ -9,8 +10,8 @@ import csv
 #
 #   Here's how to change the script to use it with an excel sheet that isn't "GRI_2017_2020 (1).xlsx":
 #   
-#       -1 On line 23, where inputFiles is declared and change the str parameter in .read_excel() to the full name and file type of the new sheet.
-#       -2 In listHandling(), on line 35 where pdf_files[] is being appended and change the name of 'BRnum', 'Pdf_URL' and 'Report Html Address' to match the new names of the subesquent rows ('file name', 'link 1', 'link 2').
+#       -1 On line 24, where inputFiles is declared and change the str parameter in .read_excel() to the full name and file type of the new sheet.
+#       -2 In listHandling(), on line 37 where pdf_files[] is being appended and change the name of 'BRnum', 'Pdf_URL' and 'Report Html Address' to match the new names of the subesquent rows ('file name', 'link 1', 'link 2').
 #
 #   Remember to read the readme file before running the script!
 #
@@ -31,12 +32,12 @@ rowsProcesedNr = 0      #   Total number of rows that has been processed to keep
 # ---Step 1: Converts the excel sheet into a python list[]
 def listHandling():
     global pdf_files
-    max = 0     #   when testing with max nr of files
+    #max = 0     #   when testing with max nr of files
     for index, row in inputFiles.iterrows():    #   For loop for each row of data in the .xslx file. I don't fully understand how this works, but it does ¯\_(ツ)_/¯ and the seemingly unused 'index' variable is important to declare because of iterrows() https://stackoverflow.com/questions/16476924/how-can-i-iterate-over-rows-in-a-pandas-dataframe
         pdf_files.append(["", row['BRnum'], row['Pdf_URL'], row['Report Html Address']])    #   Add the importat parts of the row as a new list to pdf_files[] 
-        max += 1     #  when testing with max nr of files
-        if max == 12:        #  when testing with max nr of files, set nr here
-           break
+        #max += 1
+        #if max == 12:
+           #break
 
 
 # ---Step 2: Makes a folder to put the files
@@ -118,6 +119,7 @@ def createReport():
 
 # ---What the script runs:
 if __name__ == "__main__":      #   Change  the str parameter from "__main__" to not run the following code for test purposes
+    print("\nTime of launch: ", datetime.datetime.now())    #   To check how long it takes
     print('\nConverting the excel sheet into a list for easier handling...')
     listHandling()
     print('\nCreating a folder to place the downloaded files and report...')
@@ -127,7 +129,7 @@ if __name__ == "__main__":      #   Change  the str parameter from "__main__" to
     print('\nCreating the report...')
     createReport()
     print('\nThe program is done! :)\nFind your files and the report.cvs in the "Downloaded pdfs'+str(folderNr)+'" folder.')
-
+    print("\nTime of completion: ", datetime.datetime.now())
 
 
 
@@ -165,3 +167,4 @@ if __name__ == "__main__":      #   Change  the str parameter from "__main__" to
 #   -Make the script tell the user how many rows there are in the excel sheet
 #   -Make a better file type checker (see BR50051)
 #   -Make a checker to see if the file is actually a excel sheet
+#   -
