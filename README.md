@@ -5,10 +5,10 @@ A python script to download a bunch of pdf files based on a .xlsx sheet.
 ## Description
 
 The script ("downloadPDF.py"), when run correctly, consist of 4 parts:
-    -Step 1: Extracting "BRnum", "link 1" and "link 2" from every row in a excel sheet "GRI_2017_2020 (1).xlsx" and appeneding them as a list into pdf_files[].
-    -Step 2: Creating a new uniquely named folder "Downloaded pdfsX".
-    -Step 3: For each item in pdf_files[], try to download the pdf from "link 1", and then from "link 2" if it failed, into the new folder. Note in item[0] whether it was downloaded (yes) or wasn't (no).
-    -Step 4: Make a .cvs report with all the info from pdf_files[].
+* Step 1: Extracting "BRnum", "link 1" and "link 2" from every row in a excel sheet "GRI_2017_2020 (1).xlsx" and appeneding them as a list into pdf_files[].
+* Step 2: Creating a new uniquely named folder "Downloaded pdfsX".
+* Step 3: For each item in pdf_files[], try to download the pdf from "link 1", and then from "link 2" if it failed, into the new folder. Note in item[0] whether it was downloaded (yes) or wasn't (no).
+* Step 4: Make a .cvs report with all the info from pdf_files[].
 
 This script is very fucking slow though, so that should be the number 1 thing to optimize.
 I tried to run it where it should have gone through the entire thing, it ended up downloading 105 pdfs (from BR50042 to BR50382) before the computer paused itself.
@@ -19,11 +19,11 @@ In the project we were given an old python script that didn't complete the task 
 I didn't know enough about python to optimize it, so i made my own from scratch.
 
 The files in the "\other files\" folder are as follows:
-    -"downloadPDF copy.py": A slightly older version of the script (but with the same full functionality) that has the authors old print() lines for testing.
-    -"Kravspecifikation.pdf": A requirement specification for the project.
-    -"Metadata2006_2016.xlsx": A uneeded file given as part of the project files.
-    -"OLDdownload_files.py": The old code that was given as part of the project files.
-    -"PDF Downloader (Opgavebeskrivelse).pdf": The full project description.
+* "downloadPDF copy.py": A slightly older version of the script (but with the same full functionality) that has the authors old print() lines for testing.
+* "Kravspecifikation.pdf": A requirement specification for the project.
+* "Metadata2006_2016.xlsx": A uneeded file given as part of the project files.
+* "OLDdownload_files.py": The old code that was given as part of the project files.
+* "PDF Downloader (Opgavebeskrivelse).pdf": The full project description.
 
 OBS!:
 The script is so far only made to handle excel sheets, and only download pdf files.
