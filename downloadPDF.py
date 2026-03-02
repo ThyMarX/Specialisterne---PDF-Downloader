@@ -162,9 +162,9 @@ if __name__ == "__main__":      #   Change  the str parameter from "__main__" to
 
 
 # Future improvements
-#   -I could optimize the speed by not putting the excel data into a list, and just download right away in listHandling() (also by somehow download multiple files at once but i don't know how to do that?)
+#   -I could optimize the speed by  putting the excel data into a list AND just download right it right away in listHandling() (also by somehow download multiple files at once but i don't know how to do that?)
 #   -Mention in the readme and as a print how long the program might take pr 1000 rows or 1000 downloads (figure out how long)
 #   -Make the script tell the user how many rows there are in the excel sheet
-#   -Make a better file type checker (see BR50051)
+#   -Make a better file type checker (see BR50051) while downloading
 #   -Make a checker to see if the file is actually a excel sheet
-#   -
+#   -Make the script into an .exe (maybe with pyinstaller, cx_Freeze, Nuitka or Python Tkinter? (i don't know much about it)) so it's easier to use for the user
