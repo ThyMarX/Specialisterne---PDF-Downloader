@@ -17,12 +17,14 @@ So it technically hasn't been tested if it can download all the files.
 The project was given to me by "Specialisterne - Academy".
 In the project we were given an old python script that didn't complete the task optimally, so we were told to either improve it, or make our own solution.
 I didn't know enough about python to optimize it, so i made my own from scratch.
+During the project we were also told to test and improve on a colleagues project, and my fork of their project can be found here: https://github.com/ThyMarX/week4_pdf-downloader
 
 The files in the "\other files\" folder are as follows:
 * "downloadPDF copy.py": A slightly older version of the script (but with the same full functionality) that has the authors old print() lines for testing.
 * "Kravspecifikation.pdf": A requirement specification for the project.
 * "Metadata2006_2016.xlsx": A uneeded file given as part of the project files.
 * "OLDdownload_files.py": The old code that was given as part of the project files.
+* "Presentation.pdf": The powerpoint slides i used in my 15 minutes presentation of the project (in danish).
 * "PDF Downloader (Opgavebeskrivelse).pdf": The full project description.
 
 OBS!:
